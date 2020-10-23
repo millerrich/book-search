@@ -21,7 +21,7 @@ function Card(props) {
     function saveCard() {
         console.log(bookData);
         API.saveBook(bookData)
-        .then(res => console.log(res))
+        .then(res => res.send("success"))
         .catch(err => console.log(err))
     }
 
