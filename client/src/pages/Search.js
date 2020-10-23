@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../components/navbar/nav';
 import API from '../utils/API';
+import Card from '../components/card/card';
 
 
 function Search() {
@@ -15,11 +16,11 @@ function Search() {
             console.log(res.data.items)
             const searchResults = res.data.items;
             const mapped = [];
-            console.log("search result", searchResults);
+            // console.log("search result", searchResults);
             searchResults.map(o => mapped.push(o.volumeInfo));
             
             setResults(mapped)
-            console.log("results", results);
+            // console.log("results", results);
         });
     }
 
@@ -37,6 +38,9 @@ function Search() {
                 <button type="submit" className="btn btn-primary">Submit</button>
             </div>
         </form>
+        <div className="container d-flex flex-row flex-wrap">
+            {results.map((props, index) => <Card key={index} {...props} />)}
+        </div>
         <h1>SEARCH PAGE</h1>
         </div>
     )
