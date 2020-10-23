@@ -11,8 +11,16 @@ function Search() {
     
     function searchBooks(search) {
         API.googleBook(search)
-        .then(res => setResults(res.data.items));
-        console.log(results);
+        .then(res => {
+            console.log(res.data.items)
+            const searchResults = res.data.items;
+            const mapped = [];
+            console.log("search result", searchResults);
+            searchResults.map(o => mapped.push(o.volumeInfo));
+            
+            setResults(mapped)
+            console.log("results", results);
+        });
     }
 
     function handleInputChange(event) {
