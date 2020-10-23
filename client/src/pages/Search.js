@@ -20,7 +20,7 @@ function Search() {
             searchResults.map(o => mapped.push(o.volumeInfo));
             
             setResults(mapped)
-            console.log("results", results);
+            // console.log("results", results);
         })
         .catch(err => console.log(err));
     }
