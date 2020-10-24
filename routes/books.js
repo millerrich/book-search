@@ -6,7 +6,6 @@ router.route('/')
     .post(controller.create);
 
 router.route('/:id')
-    .get(controller.findById)
     .delete(controller.remove);
 
 module.exports = router;
