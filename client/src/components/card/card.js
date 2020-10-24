@@ -6,6 +6,8 @@ function Card(props) {
     let image;
     if (props.imageLinks) {
         image = props.imageLinks.thumbnail
+    } else if (props.image) {
+        image = props.image
     } else {
         image = "https://via.placeholder.com/150"
     }
