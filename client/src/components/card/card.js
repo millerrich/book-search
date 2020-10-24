@@ -31,11 +31,11 @@ function Card(props) {
     return (
         <div className="card" style={{width: '18rem'}}>
             <img className="card-img-top" src={image} alt={props.title} />
-            <div className="card-body">
+            <div className="card-body" style={{height: '200px', overflowY: 'scroll'}}>
                 <h5 className="card-title">{props.title}</h5>
-                <h6 className="card-title">{props.authors}</h6>
-                <p className="card-text">{props.description}</p>
+                <h6 className="card-title">Written by: {props.authors}</h6>
                 <button className="btn btn-primary" onClick={saveCard}>Save Book</button>
+                <p className="card-text">{props.description}</p>
             </div>
         </div>
     )
