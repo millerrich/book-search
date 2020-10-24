@@ -1,16 +1,12 @@
 import React from 'react';
 
-function Form() {
-    function handleInputChange(event) {
-        console.log(event.target.value);
-         
-    }
+function Form(props) {
+    
     return(
-        <form className="bg-light">
+        <form>
             <div className="form-group">
-                <label for="search">Search:</label>
-                <input type="text" className="form-control" id="search" aria-describedby="bookSearch" placeholder="Search for a book" onChange={handleInputChange} />
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <label htmlFor="search">Search:</label>
+                <input type="text" className="form-control" id="search" aria-describedby="bookSearch" placeholder="Search for a book" onChange={props} />
             </div>
         </form>
     )

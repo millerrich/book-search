@@ -1,5 +1,76 @@
-body {
+.body {
+  height: 100vh;
+  overflow-y: scroll;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: #202040;
+  scrollbar-track-color: #202040;
+}
+
+.container {
+  background-color: #202040;
+}
+
+.card, .card-body, .card-img-top, .navbar, .navbar-expand-lg {
+  background-color: #543864 !important;
+  color: #FFBD69 !important;
+  border: double #222222 5px !important;
+}
+
+.navbar-brand {
+  color: #222222;
+}
+
+.nav-link {
+  color: #FFBD69 !important;
+}
+
+.active {
+  color: #FF6363 !important;
+}
+
+#search {
+  background-color: #543864;
+  border: solid #a19f9d 2px;
+  border-radius: 10px;
+  color: #FFBD69;
+  width: 33.33%;
+}
+
+.card-body {
+  height: 200px;
+  overflow-y: scroll;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+ 
+*::-webkit-scrollbar-track {
+   background: #202040;
+   box-shadow: inset 0 0 4px green;
+   border-radius: 8px;
+}
+
+ *::-webkit-scrollbar-thumb {
+   background: #FF6363;
+   border-radius: 8px;
+   box-shadow: inset 0 0 6px black;
+}
+
+.btn-primary, .btn {
+  background-color: #FF6363 !important;
+  border-color: #FFBD69 !important;
+  color: #202040 !important;
+}
+
+.form-group {
+  font-size: larger;
+  background-color: #543864 !important;
+  color: #FFBD69 !important;
+  border: double #222222 5px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }

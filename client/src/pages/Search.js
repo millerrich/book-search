@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from '../components/navbar/nav';
 import API from '../utils/API';
 import Card from '../components/card/card';
+import Form from '../components/form/form';
 
 
 function Search() {
@@ -32,7 +33,7 @@ function Search() {
     return (
         <div className="container">
         <Navbar />
-        <form className="bg-light">
+        <form>
             <div className="form-group">
                 <label htmlFor="search">Search:</label>
                 <input type="text" className="form-control" id="search" aria-describedby="bookSearch" placeholder="Search for a book" onChange={handleInputChange} />
@@ -41,7 +42,6 @@ function Search() {
         <div className="container d-flex flex-row flex-wrap">
             {results.map((props, index) => <Card key={index} {...props} />)}
         </div>
-        <h1>SEARCH PAGE</h1>
         </div>
     )
 }
