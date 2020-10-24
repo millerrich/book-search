@@ -21,6 +21,7 @@ function Card(props) {
     }
 
     function saveCard() {
+        alert("book saved!");
         console.log(bookData);
         API.saveBook(bookData)
         .then(res => res.send("success"))
@@ -32,6 +33,7 @@ function Card(props) {
             <img className="card-img-top" src={image} alt={props.title} />
             <div className="card-body">
                 <h5 className="card-title">{props.title}</h5>
+                <h6 className="card-title">{props.authors}</h6>
                 <p className="card-text">{props.description}</p>
                 <button className="btn btn-primary" onClick={saveCard}>Save Book</button>
             </div>
